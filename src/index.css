@@ -1,13 +1,353 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Cousine&family=Montserrat&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Cousine', monospace;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./assets/bg.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main {
+  height: 100%;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+}
+
+.left {
+  width: 33%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+.logo {
+  width: 15%;
+  padding: .5rem 2rem;
+}
+
+.logo1 {
+  width: 8%;
+  margin-left: 3rem;
+}
+
+.button {
+  background-color: #FF2D62;
+  color: white;
+  padding: .6rem 2.5rem ;
+  box-shadow: 0em 0em 1.25rem rgba(250, 35, 87, 0.7);
+  border-radius: 2.5625em;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s linear;
+
+}
+.button:hover{
+  background-color: #ff6e92;
+}
+
+.right {
+  width: 67%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 12rem;
+  justify-content: center;
+}
+
+.cards-container {
+  margin-top: 2.5rem;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card {
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+  padding: .8rem 1.2rem;
+  display: flex;
+}
+
+.card-image {
+  height: 6rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.1rem;
+}
+
+.text {
+  padding-inline: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.img1{
+  width: 50%;
+}
+
+.img2 {
+  display: none;
+}
+
+.top {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  }
+
+.button1 {
+  display: none;
+  visibility: hidden;
+}
+
+.copy {
+  padding: .5rem 1rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.copy-text {
+  margin-block: auto;
+  padding-inline: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.copy-btn2 {
+  visibility: hidden;
+  display: none;
+}
+
+.copy-button {
+  background-color: #FF2D62;
+  color: white;
+  padding: .6rem 2.5rem ;
+  box-shadow: 0em 0em 1.25rem rgba(250, 35, 87, 0.7);
+  border-radius: 2.5625em;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all .3s linear;
+
+}
+.copy-button:hover{
+  background-color: #ff6e92;
+}
+
+.clipboard{
+  background-color: #FF2D62;
+  color: white;
+  width: 35%;
+  align-self: center;
+  margin-left: 8rem;
+  text-align: center;
+  padding-block: .5rem;
+  border-radius: 1rem;
+  margin-top: .5rem;
+}
+.copy-container{
+  height: 5rem;
+}
+a{
+  text-decoration: none;
+}
+
+@media screen and (max-width : 48em) {
+  .copy-button {
+    padding: .5rem 1.3rem;
+    font-size: .7rem;
+    margin-right: 0rem;
+  }
+  .copy-container{
+    height: 100%;
+  }
+  .copy {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .copy-btn2 {
+    visibility: visible;
+    display: block;
+  }
+
+  .copy-text {
+    visibility: hidden;
+    display: none;
+  }
+
+  .copy-btn1 {
+    visibility: hidden;
+    display: none;
+  }
+
+  .App {
+    height: 100%;
+    background-color: black;
+    background-image: none;
+  }
+
+  .blue {
+    position: absolute;
+    mix-blend-mode: unset;
+    width: 20em;
+    height: 24em;
+    left: -5em;
+    top: -10em;
+    background: linear-gradient(123.82deg, #81A1FF 20.63%, #5449E8 80.51%), linear-gradient(123.44deg, #FAA94D 20.46%, #F27038 80.68%), linear-gradient(90deg, #FF48E2 0%, #FF2936 93.67%), radial-gradient(14109.95% 737.02% at 62.27% -5.55%, #EE7C65 0%, #F7C39D 21.88%, #EAD899 39.58%, #87D5FF 57.81%, #9281F5 79.17%, #FA5284 100%), #FFBC57;
+    filter: blur(100px);
+  }
+
+  .pink {
+    position: absolute;
+    width: 22em;
+    height: 20em;
+    left: 5em;
+    top: 20em;
+    background: linear-gradient(123.65deg, #FF5B5B 20.55%, #7544FF 80.59%), linear-gradient(123.82deg, #81A1FF 20.63%, #5449E8 80.51%), linear-gradient(123.44deg, #FAA94D 20.46%, #F27038 80.68%), linear-gradient(90deg, #FF48E2 0%, #FF2936 93.67%), radial-gradient(14109.95% 737.02% at 62.27% -5.55%, #EE7C65 0%, #F7C39D 21.88%, #EAD899 39.58%, #87D5FF 57.81%, #9281F5 79.17%, #FA5284 100%), #FFBC57;
+    filter: blur(150px);
+  }
+
+  .peach {
+    position: absolute;
+    width: 18em;
+    height: 18em;
+    left: 2em;
+    top: 42em;
+    background: radial-gradient(4364.51% 4924.13% at 15.59% 70.57%, #EE7C65 0%, #F7C39D 21.88%, #EAD899 39.58%, #87D5FF 57.81%, #9281F5 79.17%, #FA5284 100%), #FFBC57;
+    filter: blur(150px);
+    transform: rotate(59.66deg);
+
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+
+  }
+
+  .left {
+    mix-blend-mode: screen;
+    width: 90%;
+    margin: 1rem;
+    margin-top: 1.7rem;
+    border-radius: 1rem;
+  }
+
+  .left-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .logo1 {
+    display: none;
+  }
+
+  .img1 {
+    display: none;
+  }
+
+  .img2 {
+    display: inline;
+  }
+
+  .top {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
+  }
+
+  .logo {
+    width: 35%;
+    padding: 1rem;
+  }
+
+  .button1 {
+    visibility: visible;
+    background-color: #FF2D62;
+    color: white;
+    padding: .8rem 1.5rem;
+    box-shadow: 0em 0em 1.25rem rgba(250, 35, 87, 0.7);
+    border-radius: 2.5625em;
+    border: none;
+    font-size: 1.2rem;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .card {
+    width: 90%;
+    margin-inline: 1.1rem;
+    margin-block: .5rem;
+    padding: 1rem;
+    mix-blend-mode: screen;
+  }
+
+  .text {
+    padding-inline: 1rem;
+    font-size: .6rem;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  .card-image {
+    height: 4.5rem;
+    mix-blend-mode: screen;
+  }
+
+  .bg {
+    z-index: -100;
+    min-height: inherit;
+  }
 }
