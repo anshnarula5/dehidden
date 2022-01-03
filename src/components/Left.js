@@ -24,7 +24,7 @@ const Left = () => {
           <img src={opensea} alt="" /> <p>View on OpenSea</p>
         </button>
       </div>
-      <img src={logo1} className="logo1" />
+      <img src={logo1} className="logo1" alt="no_image" />
     </div>
   );
 };

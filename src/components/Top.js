@@ -5,7 +5,7 @@ import CopyContainer from "./CopyContainer";
 const Top = () => {
   return (
     <div className="top">
-          <img src={logo} className="logo" />
+          <img src={logo} className="logo"  alt="no_image" />
           <CopyContainer />
     </div>
   );

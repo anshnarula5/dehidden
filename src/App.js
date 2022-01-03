@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import Left from "./components/Left";
 
-import bg from "./assets/bg.svg";
 import Right from "./components/Right";
 import Top from "./components/Top";
 
